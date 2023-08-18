@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: CIPP # Change cippdh4c to your Function App Name
+name: CIPP
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'CIPP' # Change this to your function app name (eg cippdh4ch)
+          app-name: 'CIPP'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8BD9AFEC3DEE4850A6A158EB058705F8 }} # Change this to your repository secret name
